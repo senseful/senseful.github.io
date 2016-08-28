@@ -1,0 +1,242 @@
+.data-input select, .data-input button, .data-input input[type="text"] {
+    width: 100%;
+}
+
+.fixed-width {
+    font-family: courier new;
+}
+
+div.info-icon {
+    width: 16px;
+    height: 16px;
+    background-image: url(http://cdn.dustball.com/information.png);
+    cursor: pointer;
+    content: "";
+    display: inline-block; /* if it follows a <button>, it should not add a new line */
+}
+
+#tooltip {
+    position: absolute;
+    display: none;
+    font-size: 12px;
+    padding: 5px;
+    background-color: #C7E4FB;
+    color: #043A6B;
+    border: 1px solid #043A6B;
+    box-shadow: 2px 2px 11px #666;
+    max-width: 400px;
+}
+
+.info-text {
+    display: none;
+}
+
+/* input elements that should span the full length of the page */
+.full-len {
+  width: 100%;
+}
+
+/* textarea's that are intended for large pieces of text */
+textarea.large-text {
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll; /* always show vertical scroll bar */
+}
+input[type="text"].large-text {
+  width: 100%;
+}
+
+/* create a <div id="version-history"> tag for utilities */
+#version-history > ul:first-child:before {
+    content: "Version History:";
+    display: block;
+    font-size: 150%;
+    margin-bottom: 0.5em;
+    margin-left: -1em;
+}
+#version-history {
+  padding: 1em;
+  margin-top: 2em;
+}
+
+fieldset {
+  border: 1px solid gray;
+  float: left;
+}
+fieldset > legend {
+  font-weight: bold;
+}
+fieldset > p {
+  margin: 0px;
+  padding: 0px 4px 0px 2px;
+}
+
+.clear {
+  clear: both;
+}
+
+/* wrap a syntaxhighligher component (i.e. the pre tag) with <div class="no-wrap-div"> to prevent word wrap */
+.no-wrap-sh .dp-highlighter ol li {
+  white-space: nowrap;
+}
+
+/* --- from old template --- */
+code { word-break: break-all; }
+code {
+  font-size: 13px;
+  color: #EB7F05;
+  background-color: #FFEDDB;
+}
+.bookmarklet {
+    background-color: #EAF0F8;
+    background-image: url(http://cdn.dustball.com/script_code.png);
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+    border: 1px solid #C7CDDA;
+    display: inline-block;
+    padding: 9px 12px 9px 28px;
+    margin: 20px;
+    box-shadow: 3px 3px 10px #AAA;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #4F73A4;
+    text-decoration: none;
+}
+.bookmarklet:hover {
+    background-color: #C9DAF2;
+    color: #395773;
+    text-decoration: underline;
+    box-shadow: 3px 3px 10px #888;
+    border-color: #4F73A4;
+}
+.important {
+ font-weight: bold;
+ color: red;
+}
+kbd {
+  padding:2px 4px;
+  white-space:nowrap;
+  color:#000;
+  background:#eee;
+  border-width:1px 3px 3px 1px;
+  border-style:solid;
+  border-color:#ccc #aaa #888 #bbb;
+}
+h4, h5 {
+  color:#F63;
+}
+h4 {
+  font-size:14px;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+h5 {
+  /* used for how-to headings */
+  font-size:100%;
+  margin-bottom: 0px;
+}
+/*table {
+  border-color: #BBB;
+    border-width: 0 0 1px 1px;
+    border-style: dotted;
+}*/
+
+td {
+  border-color: #BBB;
+    border-width: 1px 1px 0 0;
+    border-style: dotted;
+  padding: 3px;
+}
+thead td {
+  font-weight: bold;
+}
+
+/* blocks */
+.alert, .warning, .info, .okay {
+    background-position: 7px 8px;
+    background-repeat: no-repeat;
+    border-radius: 7px 0px 0px 0px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 3px 3px 10px #AAA;
+    color: #37393b;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 10px 10px 10px 27px;
+}
+.alert {
+    background-color: #FCE6E1;
+    background-image: url(http://cdn.dustball.com/exclamation.png);
+    border-color: #F8C9BB;
+}
+.warning {
+    background-color: #FCF7E1;
+    background-image: url(http://cdn.dustball.com/error.png);
+    border-color: #DFD5A7;
+}
+.info {
+    background-color: #EAF0F8;
+    background-image: url(http://cdn.dustball.com/information.png);
+    border-color: #C7CDDA;
+}
+.okay {
+    background-color: #E3EFE2;
+    background-image: url(http://cdn.dustball.com/accept.png);
+    border-color: #BAD2B9;
+}
+
+.alert[alt]:before, .warning[alt]:before, .info[alt]:before, .okay[alt]:before {
+    content: attr(alt);
+    font-weight: bold;
+}
+.alert:before {
+    content: "Alert: "; /* if no "alt" attribute, add this text */
+    font-weight: bold;
+}
+.warning:before {
+    content: "Warning: "; /* if no "alt" attribute, add this text */
+    font-weight: bold;
+}
+.info:before {
+    content: "Info: "; /* if no "alt" attribute, add this text */
+    font-weight: bold;
+}
+
+/* customize the links area */
+#links h3 {
+  /*font-size: 125%;*/
+  margin-top: 1em;
+}
+#links h3:first-child {
+  margin-top: 0; /* the first element doesn't need a margin */
+}
+#links li:first-child {
+  border-top: solid 2px rgba(102, 153, 204, .5);
+}
+#links li {
+  border-top: none; /* remove default border */
+  border-bottom: dotted 1px rgba(102, 153, 204, .5);
+}
+
+/* ----- blogger customizations ---- */
+
+/* hide the navbar */
+#navbar-iframe {
+  display: none !important;
+}
+
+/* separate the comments from the post by using a border */
+#version-history, #comments {
+  border: dotted 2px rgb(102, 153, 204);
+}
+#comments {
+  margin-top: 2em;
+  padding: 1em 2em 2em 2em;
+}
+
+/* make the comment iframe bigger */
+#comment-editor {
+  width: 700px;
+}
